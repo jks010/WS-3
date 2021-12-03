@@ -30,9 +30,11 @@ curl http://localhost:8080/getC -H "Authorization: Bearer <token>"
 
 ## Admin :
 ```
-curl http://localhost:8080/deleteC/{id} -H "Authorization: Bearer <token>"
+curl -X DELETE http://localhost:8080/deleteC/{id} -H "Authorization: Bearer <token>"
 
 curl -X POST http://localhost:8080/createC -H "Authorization: Bearer <token>" -d "id=2&factory_id=1&model=Toyota&year=2018&fuel=gasoline&doors=4&cost=150.000&color=blue"
+
+curl -X PUT http://localhost:8080/createC -H "Authorization: Bearer <token>" -d "id=2&factory_id=1&model=Toyota&year=2018&fuel=gasoline&doors=4&cost=150.000&color=blue"
 
 ```
 
