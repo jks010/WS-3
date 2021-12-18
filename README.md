@@ -26,6 +26,8 @@ curl http://localhost:8080/admin -H "Authorization: Bearer <token>"
 ## User
 ```
 curl http://localhost:8080/getC -H "Authorization: Bearer <token>"
+
+curl http://localhost:8080/getC/{id} -H "Authorization: Bearer <token>"
 ```
 
 ## Admin :
@@ -34,7 +36,7 @@ curl -X DELETE http://localhost:8080/deleteC/{id} -H "Authorization: Bearer <tok
 
 curl -X POST http://localhost:8080/createC -H "Authorization: Bearer <token>" -d "id=2&factory_id=1&model=Toyota&year=2018&fuel=gasoline&doors=4&cost=150.000&color=blue"
 
-curl -X PUT http://localhost:8080/createC -H "Authorization: Bearer <token>" -d "id=2&factory_id=1&model=Toyota&year=2018&fuel=gasoline&doors=4&cost=150.000&color=blue"
+curl -X PUT http://localhost:8080/updateC/{id} -H "Authorization: Bearer <token>" -d "id=2&factory_id=1&model=Toyota&year=2018&fuel=gasoline&doors=4&cost=150.000&color=blue"
 
 ```
 
@@ -59,9 +61,9 @@ curl http://localhost:8080/getF/{id}
 # Update 
 
 ```
-curl -X PUT http://localhost:8080/putC -d "id=&factory_id=&model=&year=&fuel=&doors=&cost=&color"
+curl -X PUT http://localhost:8080/updateC/{id} -d "id=&factory_id=&model=&year=&fuel=&doors=&cost=&color"
 
-curl -X PUT http://localhost:8080/putF -d "id=&name=&country_code="
+curl -X PUT http://localhost:8080/updateF/{id} -d "id=&name=&country_code="
 ```
 # Delete 
 ```
